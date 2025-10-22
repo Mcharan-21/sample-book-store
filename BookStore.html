@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+    <link rel="stylesheet" href="BookStore.css">
+
+    <style>
+        #sectionBook1,
+        #sectionBook2,
+        #sectionBook3 {
+            display: none;
+        }
+        </style>
+
+</head>
+<body>
+    <div id="sectionHome">  
+        <div class="page-bg">
+            <h1 class="home-page-h1">Popular Book</h1>
+            <div class="book1-card d-flex flex-row justify-content-left">
+                <img class="book1-img" src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/book-apj-img.png"/>
+                <div class="book1-text"> 
+                    <h1 class="book1-h1">Wings of Fire</h1>
+                    <p class="book1-p1">An Autobiography of Abdul Kalam</p>
+                    <p class="book1-p2">by Arun Tiwari</p>
+                    <button class="btn btn-primary button" onclick="display('sectionBook1')">Read Now</button>
+                </div>
+            </div>
+
+            <h2 class="home-page-h2">Recommended Books</h2>
+
+
+            <div class="book2-card d-flex flex-row justify-content-left">
+                <img class="book2-3-img" src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/book-chetan-bhagat-img.png"/>
+                <div class="book2-3-text">
+                    <h1 class="book2-3-h1">The 3 mistakes of my life</h1>
+                    <p class="book2-3-p1">Indian author<br>by Chetan Bhagat</p>
+                    <button class="btn btn-primary button" onclick="display('sectionBook2')">Read Now</button>
+                </div>
+            </div>
+
+            <div class="book3-card d-flex flex-row justify-content-left">
+                <img class="book2-3-img" src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/harrypotter-img.png"/>
+                <div class="book2-3-text">
+                    <h1 class="book2-3-h1">Harry Potter</h1>
+                    <p class="book2-3-p1">and the Sorcerer's Stone<br>by J.K.Rowling</p>
+                    <button class="btn btn-primary button" onclick="display('sectionBook3')">Read Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="sectionBook1" >
+        <div class="detail-page-bg">
+            <img class="detail-page-img" src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/book-apj-img.png" />
+            <h1 class="detail-page-h1">Wings of Fire</h1>
+            <p class="detail-page-p1">by Arun Tiwari</p>
+            <p class="detail-page-p2">Every common man who by his sheer grit and hard work achieves success should share his story with the rest for they may find inspiration and strength to go on, in his story. The 'Wings of Fire' is one such autobiography by visionary scientist Dr. APJ Abdul Kalam, who from very humble beginnings rose to be the President of India. The book is full of insights, personal moments and life experiences of Dr. Kalam. It gives us an understanding on his journey of success.</p>
+            <button class="btn btn-warning button" onclick="display('sectionHome')">Back</button>
+            <button class="btn btn-primary button">Buy Now</button>
+        </div>
+    </div>
+
+    <div id="sectionBook2">
+        <div class="detail-page-bg">
+            <img class="detail-page-img" src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/book-chetan-bhagat-img.png" />
+            <h1 class="detail-page-h1">The 3 mistakes of my life</h1>
+            <p class="detail-page-p1">by Chetan Bhagat</p>
+            <p class="detail-page-p2">The 3 Mistakes of my life is the third novel written by eminent Indian Author Chetan Bhagat. Based on cricket, business and religion, the novel is set against the backdrop of beautiful city Ahmedabad. Revolving around three young Indian boys Omi, Ishaan and Govind, the book goes on to narrate how the three are trying their best to make ends meet in the city. Based on real events, the book starts with a dramatic twist, where Bhagat is reading an e-mail sent by some young person Govind.</p>        
+            <button class="btn btn-warning button" onclick="display('sectionHome')">Back</button>
+            <button class="btn btn-primary button">Buy Now</button>
+        </div>
+    </div>
+    
+    <div id="sectionBook3">
+        <div class="detail-page-bg">
+            <img class="detail-page-img" src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/harrypotter-img.png" />
+            <h1 class="detail-page-h1">Harry Potter</h1>
+            <p class="detail-page-p1">by J.K.Rowling</p>
+            <p class="detail-page-p2">Harry Potter's life is miserable. His parents are dead and he's stuck with his heartless relatives, who force him to live in a tiny closet under the stairs. But his fortune changes when he receives a letter that tells him the truth about himself: he's a wizard. A mysterious visitor rescues him from his relatives and takes him to his new home, Hogwarts School of Witchcraft and Wizardry. After a lifetime of bottling up his magical powers, Harry finally feels like a normal kid.</p>
+            <button class="btn btn-warning button" onclick="display('sectionHome')">Back</button>
+            <button class="btn btn-primary button">Buy Now</button>
+        </div>
+    </div>
+    <script>
+        function display(sectionId) {
+            const sections = ['sectionHome', 'sectionBook1', 'sectionBook2', 'sectionBook3'];
+            for (let id of sections) {
+            document.getElementById(id).style.display = 'none';
+            }
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+
+</body>
+</html>
